@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://byfxcixpc3i6f"]
+
+[ext_resource type="Texture2D" uid="uid://b41sxiadt7yen" path="res://sprites/conveyor_belt.png" id="1_nxmrn"]
+[ext_resource type="Script" path="res://scenes/conveyor_belt.gd" id="2_u6oxh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bo6oa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nxmrn")
+}],
+"loop": true,
+"name": &"roll",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_es4ei"]
+size = Vector2(2386, 93)
+
+[node name="ConveyorBelt" type="AnimatedSprite2D"]
+position = Vector2(0, 846)
+sprite_frames = SubResource("SpriteFrames_bo6oa")
+animation = &"roll"
+centered = false
+script = ExtResource("2_u6oxh")
+
+[node name="BeltCollision" type="AnimatableBody2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BeltCollision"]
+position = Vector2(0, 132)
+shape = SubResource("RectangleShape2D_es4ei")

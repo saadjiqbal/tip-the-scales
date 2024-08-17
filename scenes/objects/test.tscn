@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bj12syf62p1j8"]
+
+[ext_resource type="PackedScene" uid="uid://h00het4fwakf" path="res://scenes/objects/apple.tscn" id="1_tg4kk"]
+[ext_resource type="PackedScene" uid="uid://byfxcixpc3i6f" path="res://scenes/conveyor_belt.tscn" id="2_6kocp"]
+
+[node name="Test" type="Node2D"]
+
+[node name="ConveyorBelt" parent="." instance=ExtResource("2_6kocp")]
+
+[node name="Apple" parent="." instance=ExtResource("1_tg4kk")]
+position = Vector2(240, 916)
+collision_mask = 2
+target_scale = null
