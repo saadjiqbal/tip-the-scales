@@ -1,9 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://cb8lyrysmxwp5"]
+[gd_scene load_steps=3 format=3 uid="uid://cb8lyrysmxwp5"]
 
 [ext_resource type="Script" path="res://scenes/objects/base_object.gd" id="1_swsma"]
+[ext_resource type="Script" path="res://custom_resources/object_dictionary.gd" id="2_ojitv"]
 
-[node name="BaseObject" type="AnimatableBody2D"]
+[node name="BaseObject" type="StaticBody2D"]
 script = ExtResource("1_swsma")
+object_dict = ExtResource("2_ojitv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
