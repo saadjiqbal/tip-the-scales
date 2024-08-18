@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://l5sgoluep11v"]
+
+[ext_resource type="Texture2D" uid="uid://dkr81ncof3g5t" path="res://sprites/place_holder_art/Temp_Box.png" id="1_lui12"]
+[ext_resource type="Script" path="res://scenes/teleporter.gd" id="2_st1fq"]
+[ext_resource type="AudioStream" uid="uid://lbqvrytov8fl" path="res://Audio/SFX/SFX_Teleport_03.wav" id="3_1p2uf"]
+
+[node name="Teleporter" type="Sprite2D"]
+scale = Vector2(0.19, 0.398667)
+texture = ExtResource("1_lui12")
+script = ExtResource("2_st1fq")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+scale = Vector2(50, 45)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_1p2uf")
