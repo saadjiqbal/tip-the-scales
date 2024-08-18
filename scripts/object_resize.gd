@@ -28,9 +28,13 @@ func scale_object(delta):
 	#Left click to scale up the object
 	if Input.is_action_pressed("LeftClick") && mouse_in_object:
 		scale_object_up = true
+		if $AudioStreamPlayer2D.playing == false:
+			$AudioStreamPlayer2D.playing = true
 
 	if Input.is_action_just_released("LeftClick"):
 		scale_object_up = false
+		if $AudioStreamPlayer2D.playing == true:
+			$AudioStreamPlayer2D.playing = false
 
 	if scale_object_up:
 		sprite_2d.scale.x += sprite_2d.scale.x * delta
@@ -45,9 +49,13 @@ func scale_object(delta):
 	#Right click to scale the object down
 	if Input.is_action_pressed("RightClick") && mouse_in_object:
 		scale_object_down = true
+		if $AudioStreamPlayer2D.playing == false:
+			$AudioStreamPlayer2D.playing = true
 
 	if Input.is_action_just_released("RightClick"):
 		scale_object_down = false
+		if $AudioStreamPlayer2D.playing == true:
+			$AudioStreamPlayer2D.playing = false
 
 	if scale_object_down:
 		sprite_2d.scale.x += -sprite_2d.scale.x * delta

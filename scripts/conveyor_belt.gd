@@ -13,10 +13,14 @@ func detect_object(delta):
 	if $ObjectDetector.is_colliding():
 		self.stop()
 		rolling = false
+		if $AudioStreamPlayer.playing == true:
+			$AudioStreamPlayer.playing = false
 	else:
 		self.play("roll")
 		rolling = true
 		belt_collision.position.x += (speed * delta)
+		if $AudioStreamPlayer.playing == false:
+			$AudioStreamPlayer.playing = true
 	
 	#Resets the belt colosion box back to its original position
 	if belt_collision.position.x >= 1193.0:

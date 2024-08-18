@@ -28,3 +28,5 @@ texture = ExtResource("4_ein4x")
 
 [node name="Scanner" parent="." instance=ExtResource("5_t77b4")]
 position = Vector2(2033, 633)
+
+[node name="Manual" type="Sprite2D" parent="."]
