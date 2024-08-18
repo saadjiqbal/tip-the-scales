@@ -8,7 +8,6 @@ radius = 42.0
 
 [node name="Apple" type="AnimatableBody2D"]
 script = ExtResource("1_mmvp5")
-target_scale = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.1, 0.1)

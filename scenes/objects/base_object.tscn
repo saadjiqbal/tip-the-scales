@@ -4,7 +4,6 @@
 
 [node name="BaseObject" type="AnimatableBody2D"]
 script = ExtResource("1_swsma")
-target_scale = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
