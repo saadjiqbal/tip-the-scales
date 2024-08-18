@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bv5qowjdjxo8a"]
+
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_nx7mq"]
+[ext_resource type="PackedScene" uid="uid://h00het4fwakf" path="res://scenes/objects/apple.tscn" id="2_d56ds"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_nx7mq")
+
+[node name="Apple" parent="." instance=ExtResource("2_d56ds")]
