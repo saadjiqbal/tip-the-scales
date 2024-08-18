@@ -1,18 +1,26 @@
-[gd_scene load_steps=6 format=3 uid="uid://xjnffox0uabc"]
+[gd_scene load_steps=8 format=3 uid="uid://xjnffox0uabc"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_nx7mq"]
 [ext_resource type="PackedScene" uid="uid://h00het4fwakf" path="res://scenes/objects/apple.tscn" id="2_d56ds"]
 [ext_resource type="PackedScene" uid="uid://byfxcixpc3i6f" path="res://scenes/conveyor_belt.tscn" id="3_f8gkv"]
 [ext_resource type="Texture2D" uid="uid://63ek7v7otbi7" path="res://sprites/place_holder_art/Temp_Ruler.png" id="4_ein4x"]
+[ext_resource type="PackedScene" uid="uid://bqtmnirqb2oaw" path="res://scenes/platform.tscn" id="5_31v04"]
 [ext_resource type="PackedScene" uid="uid://cmqhipa1dja3t" path="res://scenes/scanner.tscn" id="5_t77b4"]
+[ext_resource type="PackedScene" uid="uid://l5sgoluep11v" path="res://scenes/teleporter.tscn" id="7_x186n"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_nx7mq")
 
+[node name="Teleporter" parent="." instance=ExtResource("7_x186n")]
+position = Vector2(847, 29)
+
+[node name="Platform" parent="." instance=ExtResource("5_31v04")]
+position = Vector2(1681, 987)
+
 [node name="ConveyorBelt" parent="." instance=ExtResource("3_f8gkv")]
 
 [node name="Apple" parent="." instance=ExtResource("2_d56ds")]
-position = Vector2(-134, 555)
+position = Vector2(-76, 849)
 
 [node name="Ruler" type="Sprite2D" parent="."]
 position = Vector2(1237, 681)
