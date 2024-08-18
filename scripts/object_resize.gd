@@ -1,6 +1,7 @@
-extends Node
+extends RigidBody2D
 
-var resize_object : bool = false
+var scale_object_up : bool = false
+var scale_object_down : bool = false
 var mouse_in_object : bool = false
 
 var current_mouse_pos : Vector2
@@ -8,38 +9,55 @@ var new_mouse_pos : Vector2
 
 var collision_shape2d : CollisionShape2D
 var sprite_2d : Sprite2D
+var physics_collision_shape : CollisionShape2D
 
 func _ready() -> void:
 	pass
 
 func _physics_process(delta) -> void:
-	new_mouse_pos = get_viewport().get_mouse_position()
+	scale_object(delta)
 
-	if Input.is_action_pressed("click") && mouse_in_object:
-		resize_object = true
+func scale_object(delta):
+	#Left click to scale up, right click to scale down
+	
+	# This will break if we give these nodes a different name
+	collision_shape2d = get_node("Area2D/CollisionShape2D")
+	sprite_2d = get_node("Sprite2D")
+	physics_collision_shape = get_node("CollisionShape2D")
 
-	if Input.is_action_just_released("click"):
-		resize_object = false
+	#Left click to scale up the object
+	if Input.is_action_pressed("LeftClick") && mouse_in_object:
+		scale_object_up = true
 
-	if resize_object:
-		# This will break if we give these nodes a different name
-		collision_shape2d = get_node("Area2D/CollisionShape2D")
-		sprite_2d = get_node("Sprite2D")
+	if Input.is_action_just_released("LeftClick"):
+		scale_object_up = false
 
-		# If we move mouse to the right, increase sprite and collision scale.
-		# Else if, we move mouse to the left, decrease sprite and collision scale.
-		if (new_mouse_pos.x - current_mouse_pos.x > 0):
-			sprite_2d.scale.x += sprite_2d.scale.x * delta
-			sprite_2d.scale.y += sprite_2d.scale.y * delta
+	if scale_object_up:
+		sprite_2d.scale.x += sprite_2d.scale.x * delta
+		sprite_2d.scale.y += sprite_2d.scale.y * delta
 
-			collision_shape2d.scale.x += collision_shape2d.scale.x * delta
-			collision_shape2d.scale.y += collision_shape2d.scale.y * delta
-		elif (new_mouse_pos.x - current_mouse_pos.x < 0):
-			sprite_2d.scale.x += -sprite_2d.scale.x * delta
-			sprite_2d.scale.y += -sprite_2d.scale.y * delta
+		collision_shape2d.scale.x += collision_shape2d.scale.x * delta
+		collision_shape2d.scale.y += collision_shape2d.scale.y * delta
 
-			collision_shape2d.scale.x += -collision_shape2d.scale.x * delta
-			collision_shape2d.scale.y += -collision_shape2d.scale.y * delta
+		physics_collision_shape.scale.x += physics_collision_shape.scale.x * delta
+		physics_collision_shape.scale.y += physics_collision_shape.scale.y * delta
+
+	#Right click to scale the object down
+	if Input.is_action_pressed("RightClick") && mouse_in_object:
+		scale_object_down = true
+
+	if Input.is_action_just_released("RightClick"):
+		scale_object_down = false
+
+	if scale_object_down:
+		sprite_2d.scale.x += -sprite_2d.scale.x * delta
+		sprite_2d.scale.y += -sprite_2d.scale.y * delta
+
+		collision_shape2d.scale.x += -collision_shape2d.scale.x * delta
+		collision_shape2d.scale.y += -collision_shape2d.scale.y * delta
+
+		physics_collision_shape.scale.x += -physics_collision_shape.scale.x * delta
+		physics_collision_shape.scale.y += -physics_collision_shape.scale.y * delta
 
 func _on_area_2d_mouse_entered():
 	current_mouse_pos = get_viewport().get_mouse_position()

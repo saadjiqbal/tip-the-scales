@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://q7sm1yy0v41i" path="res://sprites/conveyor_belt/belt0000.png" id="1_fqolv"]
 [ext_resource type="Texture2D" uid="uid://bhisl51ndnmy" path="res://sprites/conveyor_belt/belt0002.png" id="2_bbu3d"]
-[ext_resource type="Script" path="res://scripts/conveyor_belt.gd" id="2_u6oxh"]
+[ext_resource type="Script" path="res://scenes/conveyor_belt.gd" id="2_u6oxh"]
 [ext_resource type="Texture2D" uid="uid://cr4bjjfax3010" path="res://sprites/conveyor_belt/belt0004.png" id="3_r0j3q"]
 [ext_resource type="Texture2D" uid="uid://osmg4sd166ai" path="res://sprites/conveyor_belt/belt0006.png" id="4_vlr2e"]
 
@@ -39,7 +39,7 @@ centered = false
 script = ExtResource("2_u6oxh")
 
 [node name="BeltCollision" type="AnimatableBody2D" parent="."]
-collision_layer = 2
+collision_layer = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BeltCollision"]
 position = Vector2(0, 132)

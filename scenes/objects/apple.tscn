@@ -3,13 +3,13 @@
 [ext_resource type="Script" path="res://scripts/object_resize.gd" id="1_6y5lb"]
 [ext_resource type="Texture2D" uid="uid://dq5rwnh6040kq" path="res://sprites/apple.png" id="2_eqfm6"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_3n5qw"]
-radius = 42.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rja7g"]
+size = Vector2(80, 86)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mvn37"]
 size = Vector2(80, 86)
 
-[node name="Apple" type="AnimatableBody2D"]
+[node name="Apple" type="RigidBody2D"]
 position = Vector2(964, 495)
 script = ExtResource("1_6y5lb")
 
@@ -19,7 +19,8 @@ texture = ExtResource("2_eqfm6")
 offset = Vector2(0, -50)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_3n5qw")
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_rja7g")
 
 [node name="Area2D" type="Area2D" parent="."]
 
