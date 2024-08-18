@@ -7,4 +7,4 @@ script = ExtResource("1_xwwgi")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 scale = Vector2(15, 15)
-target_position = Vector2(-50, 0)
+target_position = Vector2(-100, 0)

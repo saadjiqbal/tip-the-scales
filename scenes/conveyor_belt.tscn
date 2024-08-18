@@ -45,8 +45,10 @@ position = Vector2(-566, 132)
 shape = SubResource("RectangleShape2D_es4ei")
 
 [node name="ObjectDetector" type="RayCast2D" parent="."]
-position = Vector2(848, -328)
+position = Vector2(852, -639)
 scale = Vector2(50, 8)
+target_position = Vector2(0.0200005, 88.125)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_nx7qx")
+volume_db = 8.771

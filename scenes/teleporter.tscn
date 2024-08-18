@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dkr81ncof3g5t" path="res://sprites/place_holder_art/Temp_Box.png" id="1_lui12"]
 [ext_resource type="Script" path="res://scenes/teleporter.gd" id="2_st1fq"]
-[ext_resource type="AudioStream" uid="uid://bw8yiunqy2h1t" path="res://Audio/SFX/SFX_Teleport.wav" id="3_6728b"]
+[ext_resource type="AudioStream" uid="uid://lbqvrytov8fl" path="res://Audio/SFX/SFX_Teleport_03.wav" id="3_1p2uf"]
 
 [node name="Teleporter" type="Sprite2D"]
 scale = Vector2(0.19, 0.398667)
@@ -13,5 +13,4 @@ script = ExtResource("2_st1fq")
 scale = Vector2(50, 45)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_6728b")
-volume_db = -5.272
+stream = ExtResource("3_1p2uf")

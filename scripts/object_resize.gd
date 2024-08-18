@@ -27,7 +27,10 @@ func scale_object(delta):
 
 	#Left click to scale up the object
 	if Input.is_action_pressed("LeftClick") && mouse_in_object:
-		scale_object_up = true
+		if sprite_2d.scale.x < 0.8:
+			scale_object_up = true
+		else:
+			scale_object_up = false
 		if $AudioStreamPlayer2D.playing == false:
 			$AudioStreamPlayer2D.playing = true
 
