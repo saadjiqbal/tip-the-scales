@@ -27,20 +27,22 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_es4ei"]
-size = Vector2(2386, 93)
+size = Vector2(3518, 93)
 
 [node name="ConveyorBelt" type="AnimatedSprite2D"]
 position = Vector2(0, 846)
 sprite_frames = SubResource("SpriteFrames_bo6oa")
 animation = &"roll"
-frame = 3
-frame_progress = 0.285252
+frame_progress = 0.918287
 centered = false
 script = ExtResource("2_u6oxh")
 
 [node name="BeltCollision" type="AnimatableBody2D" parent="."]
-collision_layer = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BeltCollision"]
-position = Vector2(0, 132)
+position = Vector2(-566, 132)
 shape = SubResource("RectangleShape2D_es4ei")
+
+[node name="ObjectDetector" type="RayCast2D" parent="."]
+position = Vector2(848, -328)
+scale = Vector2(50, 8)

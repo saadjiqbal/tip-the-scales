@@ -12,11 +12,11 @@ script = ExtResource("1_nx7mq")
 [node name="ConveyorBelt" parent="." instance=ExtResource("3_f8gkv")]
 
 [node name="Apple" parent="." instance=ExtResource("2_d56ds")]
-position = Vector2(731, 522)
+position = Vector2(-134, 555)
 
 [node name="Ruler" type="Sprite2D" parent="."]
 position = Vector2(1237, 681)
 texture = ExtResource("4_ein4x")
 
 [node name="Scanner" parent="." instance=ExtResource("5_t77b4")]
-position = Vector2(1244, 885)
+position = Vector2(2033, 633)
