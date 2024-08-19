@@ -18,7 +18,10 @@ func detect_object(delta):
 		
 		if audio_stream_player.playing:
 			audio_stream_player.playing = false
-			
+	
+	if object_detector.is_colliding() == false:
+		part_under_teleporter = false
+	
 	if !part_under_teleporter:
 		self.play("roll")
 		belt_collision.position.x += speed * delta

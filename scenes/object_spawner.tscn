@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://yohsb3xxbqlw"]
-
-[node name="ObjectSpawner" type="Node2D"]
-
-[node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2(800, 0)
-scale = Vector2(5, 7)

@@ -5,5 +5,5 @@ func _process(delta: float) -> void:
 	#Teleports the object coliding with the raycast
 	if Input.is_action_just_pressed("ui_accept") and $RayCast2D.is_colliding():
 		var ObjectPosition = $RayCast2D.get_collider().position
-		ObjectPosition = self.position
+		$RayCast2D.get_collider().position = Vector2(500, -500)
 		$AudioStreamPlayer.play()

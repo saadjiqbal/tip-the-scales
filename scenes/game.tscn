@@ -32,5 +32,5 @@ position = Vector2(2794, 676)
 stream = ExtResource("8_8ehep")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2(800, 0)
+position = Vector2(325, 561)
 scale = Vector2(5, 7)
