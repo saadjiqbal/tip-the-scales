@@ -19,7 +19,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	var get_part = robot_01_parts[part_number]
+	var get_part = robot_01_parts [part_number]
 	
 	if robot_01_level == true && part_number == 0:
 		get_part.instantiate()
