@@ -1,6 +1,76 @@
-[gd_scene load_steps=2 format=3 uid="uid://iy4a2pn8v7uq"]
+[gd_scene load_steps=6 format=3 uid="uid://iy4a2pn8v7uq"]
 
 [ext_resource type="Texture2D" uid="uid://ok2idkkm6wly" path="res://sprites/manual/manual_page_0.png" id="1_b1xl5"]
+[ext_resource type="Script" path="res://scripts/manual.gd" id="2_ygaf8"]
+
+[sub_resource type="Animation" id="Animation_dw64h"]
+resource_name = "open_manual"
+length = 0.25
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.169297, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1959, 1345), Vector2(972, 542)]
+}
+
+[sub_resource type="Animation" id="Animation_eevuh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1959, 1345)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bfkkr"]
+_data = {
+"RESET": SubResource("Animation_eevuh"),
+"open_manual": SubResource("Animation_dw64h")
+}
 
 [node name="Manual" type="Sprite2D"]
+position = Vector2(1959, 1345)
 texture = ExtResource("1_b1xl5")
+script = ExtResource("2_ygaf8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_bfkkr")
+}

@@ -14,6 +14,8 @@ var robot_01_level : bool = true
 
 var part_number : int = 0
 
+var space_avaialable : bool
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$AudioStreamPlayer.play()
@@ -29,9 +31,13 @@ func spawn_part() -> void:
 		add_child(robot_01_parts[part_number].instantiate())
 		part_number += 1
 		
-	if $RayCast2D.is_colliding() and needs_parts:
+	if $RayCast2D.is_colliding() and needs_parts and space_avaialable:
 		add_child(robot_01_parts[part_number].instantiate())
 		part_number += 1
+		space_avaialable = false
+	
+	if $RayCast2D.is_colliding() == false:
+		space_avaialable = true
 		
 func check_part_number() -> void:
 	if part_number >= robot_01_parts.size():

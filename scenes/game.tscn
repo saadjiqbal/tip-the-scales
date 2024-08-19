@@ -33,6 +33,7 @@ texture = ExtResource("4_ein4x")
 position = Vector2(2026, 756)
 
 [node name="Manual" parent="." instance=ExtResource("8_d6nrw")]
+z_index = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_8ehep")
