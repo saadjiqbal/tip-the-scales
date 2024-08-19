@@ -11,13 +11,14 @@ size = Vector2(238, 69)
 size = Vector2(239, 70)
 
 [node name="thruster_0" type="RigidBody2D"]
+position = Vector2(172, 71)
 script = ExtResource("1_t2vgs")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_d0pv6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 0.5)
+scale = Vector2(0.99, 0.99)
 shape = SubResource("RectangleShape2D_cjaqk")
 
 [node name="Area2D" type="Area2D" parent="."]
