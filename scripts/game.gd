@@ -18,6 +18,8 @@ var space_avaialable : bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	randomize()
+	robot_01_parts.shuffle()
 	$AudioStreamPlayer.play()
 	needs_parts = true
 
