@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://qdnfrxbellc1" path="res://sprites/ruler.png" id="6_6otky"]
 [ext_resource type="PackedScene" uid="uid://l5sgoluep11v" path="res://scenes/teleporter.tscn" id="7_x186n"]
 [ext_resource type="AudioStream" uid="uid://bp85jp075xji8" path="res://Audio/Music/S06_E06_GMTK_2024.mp3" id="8_8ehep"]
-[ext_resource type="PackedScene" uid="uid://iy4a2pn8v7uq" path="res://manual.tscn" id="8_d6nrw"]
+[ext_resource type="PackedScene" path="res://manual.tscn" id="8_d6nrw"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_nx7mq")

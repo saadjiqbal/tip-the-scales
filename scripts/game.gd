@@ -6,8 +6,9 @@ var core_0 = preload("res://scenes/objects/core_0.tscn")
 var arm_0 = preload("res://scenes/objects/arm_0.tscn")
 var antenna_0 = preload("res://scenes/objects/antenna_0.tscn")
 var thruster_0 = preload("res://scenes/objects/thruster_0.tscn")
+var satelite = preload("res://scenes/objects/satelite.tscn")
 
-var robot_01_parts = [core_0, arm_0, arm_0, antenna_0, thruster_0]
+var robot_01_parts = [core_0, arm_0, satelite, antenna_0, thruster_0]
 
 var needs_parts : bool
 var robot_01_level : bool = true
