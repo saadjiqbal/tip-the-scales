@@ -17,7 +17,7 @@ var new_mouse_pos : Vector2
 func _ready() -> void:
 	pass
 
-func _physics_process(delta) -> void:
+func _physics_process(delta):
 	scale_object(delta)
 
 func scale_object(delta) -> void:

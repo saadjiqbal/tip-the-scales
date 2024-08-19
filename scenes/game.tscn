@@ -39,5 +39,5 @@ z_index = 1
 stream = ExtResource("8_8ehep")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2(316, 545)
+position = Vector2(644, 569)
 scale = Vector2(5, 7)

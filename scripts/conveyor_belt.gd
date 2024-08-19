@@ -6,7 +6,7 @@ extends AnimatedSprite2D
 
 var part_under_teleporter: bool = false
 
-var speed: int = 300
+var speed: int = 250
 
 func _physics_process(delta: float) -> void:
 	detect_object(delta)
