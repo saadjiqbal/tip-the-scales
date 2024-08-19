@@ -17,9 +17,6 @@ script = ExtResource("1_nx7mq")
 texture = ExtResource("2_8jt7c")
 centered = false
 
-[node name="Teleporter" parent="." instance=ExtResource("7_x186n")]
-position = Vector2(853, 200)
-
 [node name="Platform" parent="." instance=ExtResource("5_31v04")]
 position = Vector2(1623, 881)
 
@@ -34,6 +31,9 @@ position = Vector2(2026, 756)
 
 [node name="Manual" parent="." instance=ExtResource("8_d6nrw")]
 z_index = 1
+
+[node name="Teleporter" parent="." instance=ExtResource("7_x186n")]
+position = Vector2(853, 200)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_8ehep")
