@@ -1,0 +1,100 @@
+[gd_scene load_steps=23 format=3 uid="uid://cghwa0ik5vteh"]
+
+[ext_resource type="Texture2D" uid="uid://bibctjkevwct6" path="res://sprites/teleport_effect/teleport0000.png" id="1_phoyw"]
+[ext_resource type="Texture2D" uid="uid://dxysglglw5vap" path="res://sprites/teleport_effect/teleport0001.png" id="2_rqmsh"]
+[ext_resource type="Texture2D" uid="uid://boximejcuixeo" path="res://sprites/teleport_effect/teleport0002.png" id="3_od6u1"]
+[ext_resource type="Texture2D" uid="uid://w7m8dj5wjtsq" path="res://sprites/teleport_effect/teleport0003.png" id="4_lg4e6"]
+[ext_resource type="Texture2D" uid="uid://b3ikuyq3p7p0j" path="res://sprites/teleport_effect/teleport0004.png" id="5_av2v1"]
+[ext_resource type="Texture2D" uid="uid://c2ieqangqk3eh" path="res://sprites/teleport_effect/teleport0005.png" id="6_yxrb6"]
+[ext_resource type="Texture2D" uid="uid://caymnv7die776" path="res://sprites/teleport_effect/teleport0006.png" id="7_h54d7"]
+[ext_resource type="Texture2D" uid="uid://ctrespb0xip37" path="res://sprites/teleport_effect/teleport0007.png" id="8_gkbmo"]
+[ext_resource type="Texture2D" uid="uid://diqyh2drbkvih" path="res://sprites/teleport_effect/teleport0008.png" id="9_ebbn0"]
+[ext_resource type="Texture2D" uid="uid://dtud3b655jiuh" path="res://sprites/teleport_effect/teleport0009.png" id="10_k4ply"]
+[ext_resource type="Texture2D" uid="uid://c3qdxtaivcv0d" path="res://sprites/teleport_effect/teleport0010.png" id="11_b6yqp"]
+[ext_resource type="Texture2D" uid="uid://vjwjt5w01xs5" path="res://sprites/teleport_effect/teleport0011.png" id="12_ksoul"]
+[ext_resource type="Texture2D" uid="uid://bs252itm3yxan" path="res://sprites/teleport_effect/teleport0012.png" id="13_7vh5k"]
+[ext_resource type="Texture2D" uid="uid://dap3w18jmjv76" path="res://sprites/teleport_effect/teleport0013.png" id="14_o7sv4"]
+[ext_resource type="Texture2D" uid="uid://blfmqlhw376fp" path="res://sprites/teleport_effect/teleport0014.png" id="15_an5ru"]
+[ext_resource type="Texture2D" uid="uid://chkxeqefhldmb" path="res://sprites/teleport_effect/teleport0015.png" id="16_4xaw8"]
+[ext_resource type="Texture2D" uid="uid://cfg4cj61wk6uj" path="res://sprites/teleport_effect/teleport0016.png" id="17_lkb3t"]
+[ext_resource type="Texture2D" uid="uid://dmkyp1fpuwri7" path="res://sprites/teleport_effect/teleport0017.png" id="18_6dbxd"]
+[ext_resource type="Texture2D" uid="uid://bvcjm5d57yfaa" path="res://sprites/teleport_effect/teleport0018.png" id="19_wo3uc"]
+[ext_resource type="Texture2D" uid="uid://rvo2d62uooii" path="res://sprites/teleport_effect/teleport0019.png" id="20_hc2fb"]
+[ext_resource type="Texture2D" uid="uid://xsn30d245eyq" path="res://sprites/teleport_effect/teleport0020.png" id="21_7b6jk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3i2q6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_phoyw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_rqmsh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_od6u1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lg4e6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_av2v1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_yxrb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_h54d7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_gkbmo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ebbn0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_k4ply")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_b6yqp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ksoul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_7vh5k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_o7sv4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_an5ru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_4xaw8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_lkb3t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_6dbxd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_wo3uc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_hc2fb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_7b6jk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
+[node name="TeleportEffect" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_3i2q6")
+frame = 5
+frame_progress = 0.24105
+centered = false
