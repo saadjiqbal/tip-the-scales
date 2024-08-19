@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dse7ikrhar230"]
+[gd_scene load_steps=6 format=3 uid="uid://cplpp2mrkm7cg"]
 
 [ext_resource type="Script" path="res://scripts/object_resize.gd" id="1_td8tf"]
 [ext_resource type="Texture2D" uid="uid://cqkayfni6cerd" path="res://sprites/parts/antenna_0.png" id="2_74fcd"]
