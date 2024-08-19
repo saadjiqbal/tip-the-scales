@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://xjnffox0uabc"]
+[gd_scene load_steps=8 format=3 uid="uid://xjnffox0uabc"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_nx7mq"]
 [ext_resource type="PackedScene" uid="uid://byfxcixpc3i6f" path="res://scenes/conveyor_belt.tscn" id="3_f8gkv"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://cmqhipa1dja3t" path="res://scenes/scanner.tscn" id="5_t77b4"]
 [ext_resource type="PackedScene" uid="uid://l5sgoluep11v" path="res://scenes/teleporter.tscn" id="7_x186n"]
 [ext_resource type="AudioStream" uid="uid://bp85jp075xji8" path="res://Audio/Music/S06_E06_GMTK_2024.mp3" id="8_8ehep"]
-[ext_resource type="PackedScene" uid="uid://iqxos2m212q1" path="res://scenes/ObjectSpawner.tscn" id="9_ckpqg"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_nx7mq")
@@ -32,5 +31,6 @@ position = Vector2(2794, 676)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_8ehep")
 
-[node name="ObjectSpawner" parent="." instance=ExtResource("9_ckpqg")]
-position = Vector2(234, 433)
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(800, 0)
+scale = Vector2(5, 7)
