@@ -11,6 +11,7 @@ size = Vector2(146, 340)
 size = Vector2(147, 341)
 
 [node name="arm_0" type="RigidBody2D"]
+rotation = 1.5708
 script = ExtResource("1_r0juf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

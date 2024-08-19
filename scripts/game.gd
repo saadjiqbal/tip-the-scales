@@ -13,7 +13,7 @@ var needs_parts : bool
 var robot_01_level : bool = true
 
 var part_number : int = 0
-
+var randomize_scale : float
 var space_avaialable : bool
 
 # Called when the node enters the scene tree for the first time.
