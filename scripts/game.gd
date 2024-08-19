@@ -27,11 +27,11 @@ func _process(_delta) -> void:
 func spawn_part() -> void:
 	if robot_01_level and part_number == 0:
 		add_child(robot_01_parts[part_number].instantiate())
+		part_number += 1
 		
 	if $RayCast2D.is_colliding() and needs_parts:
 		add_child(robot_01_parts[part_number].instantiate())
-	
-	part_number += 1
+		part_number += 1
 		
 func check_part_number() -> void:
 	if part_number >= robot_01_parts.size():

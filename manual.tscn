@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://iy4a2pn8v7uq"]
+
+[ext_resource type="Texture2D" uid="uid://ok2idkkm6wly" path="res://sprites/manual/manual_page_0.png" id="1_b1xl5"]
+
+[node name="Manual" type="Sprite2D"]
+texture = ExtResource("1_b1xl5")
