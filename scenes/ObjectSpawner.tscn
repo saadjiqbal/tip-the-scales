@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://iqxos2m212q1"]
+
+[ext_resource type="Script" path="res://scenes/object_spawner.gd" id="1_o66ed"]
+
+[node name="ObjectSpawner" type="Node2D"]
+script = ExtResource("1_o66ed")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(800, 0)
+scale = Vector2(5, 7)
