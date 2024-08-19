@@ -1,7 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://xjnffox0uabc"]
+[gd_scene load_steps=8 format=3 uid="uid://xjnffox0uabc"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_nx7mq"]
-[ext_resource type="PackedScene" uid="uid://h00het4fwakf" path="res://scenes/objects/apple.tscn" id="2_d56ds"]
 [ext_resource type="PackedScene" uid="uid://byfxcixpc3i6f" path="res://scenes/conveyor_belt.tscn" id="3_f8gkv"]
 [ext_resource type="Texture2D" uid="uid://63ek7v7otbi7" path="res://sprites/place_holder_art/Temp_Ruler.png" id="4_ein4x"]
 [ext_resource type="PackedScene" uid="uid://bqtmnirqb2oaw" path="res://scenes/platform.tscn" id="5_31v04"]
@@ -20,9 +19,6 @@ position = Vector2(1681, 987)
 
 [node name="ConveyorBelt" parent="." instance=ExtResource("3_f8gkv")]
 
-[node name="Apple" parent="." instance=ExtResource("2_d56ds")]
-position = Vector2(-76, 849)
-
 [node name="Ruler" type="Sprite2D" parent="."]
 position = Vector2(1237, 681)
 texture = ExtResource("4_ein4x")
@@ -34,3 +30,7 @@ position = Vector2(2794, 676)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_8ehep")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(800, 0)
+scale = Vector2(5, 7)
