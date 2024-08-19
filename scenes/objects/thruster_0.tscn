@@ -4,27 +4,28 @@
 [ext_resource type="Texture2D" uid="uid://bvcyvdgosj8ie" path="res://sprites/parts/thruster_0.png" id="2_d0pv6"]
 [ext_resource type="AudioStream" uid="uid://f1tduffby4tp" path="res://Audio/SFX/SFX_Ratchet.wav" id="3_swvdk"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fkdjl"]
-size = Vector2(244, 69)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cjaqk"]
+size = Vector2(238, 69)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jn520"]
-size = Vector2(243, 69)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ocqxp"]
+size = Vector2(239, 70)
 
 [node name="thruster_0" type="RigidBody2D"]
+position = Vector2(172, 71)
 script = ExtResource("1_t2vgs")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_d0pv6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -0.5)
-shape = SubResource("RectangleShape2D_fkdjl")
+scale = Vector2(0.99, 0.99)
+shape = SubResource("RectangleShape2D_cjaqk")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1.5, -0.5)
-shape = SubResource("RectangleShape2D_jn520")
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_ocqxp")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_swvdk")

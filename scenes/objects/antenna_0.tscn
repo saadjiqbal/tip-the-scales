@@ -5,26 +5,25 @@
 [ext_resource type="AudioStream" uid="uid://f1tduffby4tp" path="res://Audio/SFX/SFX_Ratchet.wav" id="3_sm087"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fkdjl"]
-size = Vector2(244, 69)
+size = Vector2(84, 176)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jn520"]
-size = Vector2(243, 69)
+size = Vector2(83, 261)
 
 [node name="antenna_0" type="RigidBody2D"]
-visible = false
 script = ExtResource("1_td8tf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_74fcd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 5.5)
+position = Vector2(0, 44)
 shape = SubResource("RectangleShape2D_fkdjl")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1.5, 5.5)
+position = Vector2(0.5, 1.5)
 shape = SubResource("RectangleShape2D_jn520")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
