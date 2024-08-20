@@ -4,7 +4,11 @@ extends Control
 	preload("res://scenes/lose_screen.tscn")
 @onready var health_sprites : Control = $HealthSprites
 
+
 var health: int = Global.health
+
+func _ready() -> void:
+	Global.health = 5
 
 # Free the rightmost health indicator, and load lose_screen.tscn if health == 0
 func _on_game_damage_taken():
