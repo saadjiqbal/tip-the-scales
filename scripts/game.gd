@@ -1,7 +1,15 @@
 extends Node2D
 
-# VARIABLES
+var can_appand : bool
+var part_list : int
+#core_0 = 0
+#arm_0 = 1
+#antenna_0 = 2
+#thruster_0 = 3
+#satelite = 4
 
+
+# VARIABLES
 var core_0 = preload("res://scenes/objects/core_0.tscn")
 var arm_0 = preload("res://scenes/objects/arm_0.tscn")
 var antenna_0 = preload("res://scenes/objects/antenna_0.tscn")
@@ -45,3 +53,17 @@ func spawn_part() -> void:
 func check_part_number() -> void:
 	if part_number >= robot_01_parts.size():
 		needs_parts = false
+
+func append_array():
+	if can_appand:
+		if part_list == 0:
+			robot_01_parts.append(core_0)
+		elif part_list == 1:
+			robot_01_parts.append(arm_0)
+		elif part_list == 2:
+			robot_01_parts.append(antenna_0)
+		elif part_list == 3:
+			robot_01_parts.append(thruster_0)
+		elif part_list == 4:
+			robot_01_parts.append(satelite)
+		print(robot_01_parts)
