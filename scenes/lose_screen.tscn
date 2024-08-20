@@ -38,7 +38,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_otipo")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="BackgroundTexture" type="TextureRect" parent="."]
+modulate = Color(0.394531, 0.394531, 0.394531, 1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -91,4 +92,4 @@ text = "exit game
 position = Vector2(1398, 558)
 sprite_frames = SubResource("SpriteFrames_e6kmd")
 animation = &"fire"
-frame_progress = 0.709306
+frame_progress = 0.573503

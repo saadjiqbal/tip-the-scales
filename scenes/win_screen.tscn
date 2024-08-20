@@ -1,0 +1,99 @@
+[gd_scene load_steps=9 format=3 uid="uid://crs2fox4rq8t8"]
+
+[ext_resource type="Texture2D" uid="uid://2pw0q6jimw0y" path="res://sprites/scenery/menu.png" id="1_lwlwq"]
+[ext_resource type="Script" path="res://scenes/win_screen.gd" id="1_t6ert"]
+[ext_resource type="Texture2D" uid="uid://boekyecldrqe2" path="res://sprites/merged/merged_0.png" id="2_67bb1"]
+[ext_resource type="LabelSettings" uid="uid://bwyk0l0rth6ab" path="res://misc_resources/default_header.tres" id="3_wn46r"]
+[ext_resource type="Texture2D" uid="uid://cvb7jfkaxmbdu" path="res://sprites/scenery/speech.png" id="4_5flnf"]
+[ext_resource type="Theme" uid="uid://domq57dpstxo7" path="res://misc_resources/default_button_theme.tres" id="4_75wbx"]
+[ext_resource type="FontFile" uid="uid://bm7ctwey0757e" path="res://misc_resources/Cella.ttf" id="6_6k4p6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0wuot"]
+font = ExtResource("6_6k4p6")
+font_size = 48
+font_color = Color(0.550919, 0.90625, 0.389404, 1)
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[node name="WinScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t6ert")
+
+[node name="BackgroundTexture" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_lwlwq")
+
+[node name="RobotTexture" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1036.0
+offset_top = 329.0
+offset_right = 1823.0
+offset_bottom = 999.0
+texture = ExtResource("2_67bb1")
+
+[node name="SpeechTexture" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 452.0
+offset_top = 412.0
+offset_right = 1292.0
+offset_bottom = 702.0
+texture = ExtResource("4_5flnf")
+
+[node name="TitleLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -358.5
+offset_top = 74.0
+offset_right = 358.5
+offset_bottom = 233.0
+grow_horizontal = 2
+text = "Success!"
+label_settings = ExtResource("3_wn46r")
+
+[node name="ThanksLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 509.0
+offset_top = 459.0
+offset_right = 1248.0
+offset_bottom = 519.0
+text = "Thank you for playing!"
+label_settings = SubResource("LabelSettings_0wuot")
+
+[node name="RestartGame" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 62.0
+offset_top = -339.0
+offset_right = 608.0
+offset_bottom = -251.0
+grow_vertical = 0
+theme = ExtResource("4_75wbx")
+text = "restart game"
+
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 62.0
+offset_top = -209.0
+offset_right = 473.0
+offset_bottom = -121.0
+grow_vertical = 0
+theme = ExtResource("4_75wbx")
+text = "exit game
+"

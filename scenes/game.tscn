@@ -62,11 +62,11 @@ offset_top = 79.0
 offset_right = -443.0
 offset_bottom = 167.0
 
-[node name="Panel2" parent="PauseMenu" index="4"]
-offset_left = -112.0
-offset_top = -227.0
-offset_right = 888.0
-offset_bottom = 273.0
+[node name="Instructionpanel" parent="PauseMenu" index="4"]
+offset_left = -88.0
+offset_top = -281.0
+offset_right = 912.0
+offset_bottom = 519.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_8ehep")

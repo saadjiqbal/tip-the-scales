@@ -16,7 +16,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qwkh3")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="BackgroundTexture" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -43,10 +43,10 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 57.0
-offset_top = -571.0
-offset_right = 603.0
-offset_bottom = -483.0
+offset_left = 41.0
+offset_top = -510.0
+offset_right = 587.0
+offset_bottom = -422.0
 grow_vertical = 0
 theme = ExtResource("3_qo2rq")
 text = "restart game"
@@ -56,52 +56,60 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 57.0
-offset_top = -433.0
-offset_right = 468.0
-offset_bottom = -345.0
+offset_left = 41.0
+offset_top = -390.0
+offset_right = 452.0
+offset_bottom = -302.0
 grow_vertical = 0
 theme = ExtResource("3_qo2rq")
 text = "exit game
 "
 
-[node name="Panel2" type="Panel" parent="."]
+[node name="Instructionpanel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1069.0
-offset_top = -747.0
-offset_right = -69.0
-offset_bottom = -247.0
+offset_left = -1048.0
+offset_top = -838.0
+offset_right = -48.0
+offset_bottom = -38.0
 grow_horizontal = 0
 grow_vertical = 0
 
-[node name="InstructionsLabel" type="Label" parent="Panel2"]
+[node name="InstructionsLabel" type="Label" parent="Instructionpanel"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -479.0
-offset_top = -238.5
-offset_right = 479.0
-offset_bottom = 238.5
+offset_left = -453.5
+offset_top = -214.5
+offset_right = 453.5
+offset_bottom = 214.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "Instructions
-- [button_press] to open manual
-- resize parts to match manual scale
-- left click to increase part size
-- right click to decrease part size
+- click on manual to open or close it.
+- resize parts to match manual scale.
+- left click to increase part size.
+- right click to decrease part size.
 - when scale of right-most part is 
-  accurate, press space to finalize it
+  accurate, press space to finalize it.
+- if it's close enough to the target
+  scale, it'll be added to the
+  platform on the right.
+- if it's too far off, it'll be
+  discarded and another one will be
+  generated.
+- if 5 parts are discarded, the game
+  is over.
 - new parts will come in from the
-  left on the conveyor belt
-- press escape to pause and unpause"
+  left on the conveyor belt.
+- press escape to pause and unpause."
 label_settings = ExtResource("4_uem5o")
 
 [connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
