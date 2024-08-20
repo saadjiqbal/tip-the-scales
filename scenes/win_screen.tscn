@@ -97,3 +97,6 @@ grow_vertical = 0
 theme = ExtResource("4_75wbx")
 text = "exit game
 "
+
+[connection signal="pressed" from="RestartGame" to="." method="_on_restart_game_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

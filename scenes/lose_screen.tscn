@@ -92,4 +92,7 @@ text = "exit game
 position = Vector2(1398, 558)
 sprite_frames = SubResource("SpriteFrames_e6kmd")
 animation = &"fire"
-frame_progress = 0.573503
+frame_progress = 0.785261
+
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
