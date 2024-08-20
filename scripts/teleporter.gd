@@ -28,6 +28,7 @@ func _process(delta: float) -> void:
 			
 			
 		$AudioStreamPlayer.play()
+		$TeleportEffect.play("teleport")
 
 func check_collisions():
 	if $RayCast2D.is_colliding():
