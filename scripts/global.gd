@@ -1,6 +1,6 @@
 extends Node
 
-var durabilty : int = 5
+var durability : int = 5
 
 
 # Called when the node enters the scene tree for the first time.

@@ -41,6 +41,7 @@ func spawn_part() -> void:
 	if robot_01_level and part_number == 0:
 		add_child(robot_01_parts[part_number].instantiate())
 		part_number += 1
+		robot_01_parts.erase(0)
 		
 	if $RayCast2D.is_colliding() and needs_parts and space_avaialable:
 		add_child(robot_01_parts[part_number].instantiate())

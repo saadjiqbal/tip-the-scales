@@ -30,10 +30,13 @@ func _process(delta: float) -> void:
 		else:
 			$RayCast2D.get_collider().queue_free()
 			$Bad_job.play()
+			#Appends the part list array to include the bad part
 			translate_name_to_part()
 			get_parent().can_appand = true
 			get_parent().append_array()
 			get_parent().can_appand = false
+			#Reduces the machines durability
+			Global.durability -= 1
 		
 		print(object_scale)
 		print(object_name)
