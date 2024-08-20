@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qdnfrxbellc1"
-path="res://.godot/imported/ruler.png-3befe76d92a10e99b2b67221ad54bb0b.ctex"
+uid="uid://dypkmni1io311"
+path="res://.godot/imported/background.png-de6e9cf85ab1ac25fc62d9649cea2bfb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/ruler.png"
-dest_files=["res://.godot/imported/ruler.png-3befe76d92a10e99b2b67221ad54bb0b.ctex"]
+source_file="res://sprites/scenery/background.png"
+dest_files=["res://.godot/imported/background.png-de6e9cf85ab1ac25fc62d9649cea2bfb.ctex"]
 
 [params]
 

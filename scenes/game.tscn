@@ -1,15 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://xjnffox0uabc"]
+[gd_scene load_steps=12 format=3 uid="uid://xjnffox0uabc"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_nx7mq"]
-[ext_resource type="Texture2D" uid="uid://dypkmni1io311" path="res://sprites/backgrounds/background.png" id="2_8jt7c"]
+[ext_resource type="Texture2D" uid="uid://dypkmni1io311" path="res://sprites/scenery/background.png" id="2_8jt7c"]
 [ext_resource type="PackedScene" uid="uid://byfxcixpc3i6f" path="res://scenes/conveyor_belt.tscn" id="3_f8gkv"]
 [ext_resource type="PackedScene" uid="uid://bqtmnirqb2oaw" path="res://scenes/platform.tscn" id="5_31v04"]
 [ext_resource type="PackedScene" uid="uid://cmqhipa1dja3t" path="res://scenes/scanner.tscn" id="5_t77b4"]
-[ext_resource type="Texture2D" uid="uid://qdnfrxbellc1" path="res://sprites/ruler.png" id="6_6otky"]
+[ext_resource type="Texture2D" uid="uid://qdnfrxbellc1" path="res://sprites/scenery/ruler.png" id="6_6otky"]
 [ext_resource type="PackedScene" uid="uid://l5sgoluep11v" path="res://scenes/teleporter.tscn" id="7_x186n"]
 [ext_resource type="AudioStream" uid="uid://bp85jp075xji8" path="res://Audio/Music/S06_E06_GMTK_2024.mp3" id="8_8ehep"]
 [ext_resource type="PackedScene" path="res://manual.tscn" id="8_d6nrw"]
 [ext_resource type="PackedScene" uid="uid://cf8ua2wgbg8sc" path="res://scenes/pause_menu.tscn" id="9_s66rr"]
+[ext_resource type="PackedScene" uid="uid://bnom3816tvnmy" path="res://scenes/health_ui.tscn" id="11_i0i4r"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_nx7mq")
@@ -61,11 +62,11 @@ offset_top = 79.0
 offset_right = -443.0
 offset_bottom = 167.0
 
-[node name="Panel2" parent="PauseMenu" index="4"]
-offset_left = -112.0
-offset_top = -227.0
-offset_right = 888.0
-offset_bottom = 273.0
+[node name="Instructionpanel" parent="PauseMenu" index="4"]
+offset_left = -88.0
+offset_top = -281.0
+offset_right = 912.0
+offset_bottom = 519.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_8ehep")
@@ -73,5 +74,7 @@ stream = ExtResource("8_8ehep")
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2(644, 569)
 scale = Vector2(5, 7)
+
+[node name="HealthUI" parent="." instance=ExtResource("11_i0i4r")]
 
 [editable path="PauseMenu"]
