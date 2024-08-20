@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://qdnfrxbellc1" path="res://sprites/scenery/ruler.png" id="6_6otky"]
 [ext_resource type="PackedScene" uid="uid://l5sgoluep11v" path="res://scenes/teleporter.tscn" id="7_x186n"]
 [ext_resource type="AudioStream" uid="uid://bp85jp075xji8" path="res://Audio/Music/S06_E06_GMTK_2024.mp3" id="8_8ehep"]
-[ext_resource type="PackedScene" path="res://manual.tscn" id="8_d6nrw"]
+[ext_resource type="PackedScene" uid="uid://iy4a2pn8v7uq" path="res://manual.tscn" id="8_d6nrw"]
 [ext_resource type="PackedScene" uid="uid://cf8ua2wgbg8sc" path="res://scenes/pause_menu.tscn" id="9_s66rr"]
 [ext_resource type="PackedScene" uid="uid://bnom3816tvnmy" path="res://scenes/health_ui.tscn" id="11_i0i4r"]
 

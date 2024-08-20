@@ -2,7 +2,7 @@ extends Control
 
 @onready var lose_screen: PackedScene =\
 	preload("res://scenes/lose_screen.tscn")
-@onready var health_sprites : Control = $HealthSprites
+@onready var health_sprites: Control = $HealthSprites
 
 
 var health: int = Global.health

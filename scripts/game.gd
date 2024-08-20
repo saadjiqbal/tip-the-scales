@@ -1,5 +1,8 @@
 extends Node2D
 
+@onready var win_screen: PackedScene =\
+	preload("res://scenes/win_screen.tscn")
+
 var can_appand : bool
 var part_list : int
 #core_0 = 0
@@ -68,6 +71,8 @@ func timer_timeout():
 func check_part_number() -> void:
 	if part_number >= robot_01_parts.size():
 		needs_parts = false
+		Global.win = true
+		get_tree().change_scene_to_packed(win_screen)
 
 func append_array():
 	if can_appand:

@@ -3,6 +3,8 @@ extends Node
 var health : int
 var damage : bool
 
+var win : bool
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
