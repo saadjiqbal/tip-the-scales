@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://c7en6dodpm0dm"]
 
 [ext_resource type="LabelSettings" uid="uid://bwyk0l0rth6ab" path="res://misc_resources/default_header.tres" id="1_4rsee"]
-[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_rleit"]
-[ext_resource type="Texture2D" uid="uid://2pw0q6jimw0y" path="res://sprites/backgrounds/menu.png" id="2_34a00"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_rleit"]
+[ext_resource type="Texture2D" uid="uid://2pw0q6jimw0y" path="res://sprites/scenery/menu.png" id="2_34a00"]
 [ext_resource type="Theme" uid="uid://domq57dpstxo7" path="res://misc_resources/default_button_theme.tres" id="2_waxo4"]
 [ext_resource type="LabelSettings" uid="uid://ce8vg46al3y6r" path="res://misc_resources/default_text.tres" id="3_x3km6"]
 
@@ -15,7 +15,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_rleit")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="BackgroundTexture" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -30,9 +30,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -627.0
-offset_top = 157.0
+offset_top = 57.0
 offset_right = 627.0
-offset_bottom = 316.0
+offset_bottom = 216.0
 grow_horizontal = 2
 text = "Part Inspector"
 label_settings = ExtResource("1_4rsee")
@@ -64,21 +64,21 @@ theme = ExtResource("2_waxo4")
 text = "exit game
 "
 
-[node name="Panel2" type="Panel" parent="."]
+[node name="InstructionsLabel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1142.0
-offset_top = -660.0
-offset_right = -142.0
-offset_bottom = -160.0
+offset_left = -1048.0
+offset_top = -838.0
+offset_right = -48.0
+offset_bottom = -38.0
 grow_horizontal = 0
 grow_vertical = 0
 
-[node name="InstructionsLabel" type="Label" parent="Panel2"]
+[node name="InstructionsLabel" type="Label" parent="InstructionsLabel"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -92,15 +92,23 @@ offset_bottom = 214.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "Instructions
-- click on manual to open or close it
-- resize parts to match manual scale
-- left click to increase part size
-- right click to decrease part size
+- click on manual to open or close it.
+- resize parts to match manual scale.
+- left click to increase part size.
+- right click to decrease part size.
 - when scale of right-most part is 
-  accurate, press space to finalize it
+  accurate, press space to finalize it.
+- if it's close enough to the target
+  scale, it'll be added to the
+  platform on the right.
+- if it's too far off, it'll be
+  discarded and another one will be
+  generated.
+- if 5 parts are discarded, the game
+  is over.
 - new parts will come in from the
-  left on the conveyor belt
-- press escape to pause and unpause"
+  left on the conveyor belt.
+- press escape to pause and unpause."
 label_settings = ExtResource("3_x3km6")
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
