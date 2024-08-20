@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://l5sgoluep11v"]
+[gd_scene load_steps=22 format=3 uid="uid://l5sgoluep11v"]
 
 [ext_resource type="Texture2D" uid="uid://b6hoooye2h5rd" path="res://sprites/scenery/teleporter.png" id="1_gka44"]
 [ext_resource type="Script" path="res://scripts/teleporter.gd" id="2_st1fq"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://45lyv5e5m3da" path="res://sprites/scanner_animation/scanner_animation0013.png" id="17_xy1ti"]
 [ext_resource type="Texture2D" uid="uid://mid215gmcgey" path="res://sprites/scanner_animation/scanner_animation0014.png" id="18_g3y7j"]
 [ext_resource type="Texture2D" uid="uid://de8mbbueyjy1m" path="res://sprites/scanner_animation/scanner_animation0015.png" id="19_c4808"]
+[ext_resource type="AudioStream" uid="uid://ci6q5bxm7riq1" path="res://Audio/SFX/SFX_Scan.wav" id="20_8ksbb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_equyk"]
 animations = [{
@@ -108,3 +109,6 @@ sprite_frames = SubResource("SpriteFrames_equyk")
 animation = &"scan"
 frame = 14
 frame_progress = 1.0
+
+[node name="SFX_Scan" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_8ksbb")

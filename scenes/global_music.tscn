@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqa8hfd1eicda"]
+
+[ext_resource type="AudioStream" uid="uid://bp85jp075xji8" path="res://Audio/Music/S06_E06_GMTK_2024.mp3" id="1_2elh8"]
+
+[node name="global_music" type="AudioStreamPlayer"]
+stream = ExtResource("1_2elh8")
+autoplay = true
+parameters/looping = true

@@ -32,7 +32,7 @@ var times_up : bool = false
 func _ready() -> void:
 	randomize()
 	robot_01_parts.shuffle()
-	$AudioStreamPlayer.play()
+	#$AudioStreamPlayer.play()
 	needs_parts = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

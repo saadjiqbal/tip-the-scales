@@ -28,6 +28,7 @@ func _process(delta: float) -> void:
 			
 			
 		$AudioStreamPlayer.play()
+		$SFX_Scan.play()
 		$TeleportEffect.play("teleport")
 		$ScannerAnimation.play("scan")
 
