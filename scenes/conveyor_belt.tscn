@@ -61,10 +61,5 @@ shape = SubResource("RectangleShape2D_2d8m4")
 stream = ExtResource("6_nx7qx")
 volume_db = 8.771
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.1
-one_shot = true
-
 [connection signal="area_entered" from="ObjectDetector" to="." method="_on_object_detector_area_entered"]
 [connection signal="area_exited" from="ObjectDetector" to="." method="_on_object_detector_area_exited"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
