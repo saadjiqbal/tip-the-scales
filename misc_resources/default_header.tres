@@ -1,0 +1,10 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://bwyk0l0rth6ab"]
+
+[ext_resource type="FontFile" uid="uid://bm7ctwey0757e" path="res://misc_resources/Cella.ttf" id="1_u4uyj"]
+
+[resource]
+font = ExtResource("1_u4uyj")
+font_size = 128
+font_color = Color(1, 0.682617, 0.1875, 1)
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
