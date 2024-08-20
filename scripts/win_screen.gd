@@ -1,5 +1,8 @@
 extends Control
 
+func  _ready() -> void:
+	$SFX_Win.play()
+
 func _on_quit_button_pressed() -> void:
 	get_tree().quit()
 	
