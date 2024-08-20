@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bnom3816tvnmy"]
+[gd_scene load_steps=6 format=3 uid="uid://cqpkbxkwluad7"]
 
 [ext_resource type="Texture2D" uid="uid://ba11lijvlsgeg" path="res://sprites/health/health bar.png" id="1_qvvjr"]
 [ext_resource type="Script" path="res://scripts/health_ui.gd" id="1_yhb11"]

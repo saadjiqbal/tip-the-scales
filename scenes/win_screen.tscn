@@ -1,7 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://crs2fox4rq8t8"]
+[gd_scene load_steps=9 format=3 uid="uid://bc0icelor8184"]
 
 [ext_resource type="Texture2D" uid="uid://2pw0q6jimw0y" path="res://sprites/scenery/menu.png" id="1_lwlwq"]
-[ext_resource type="Script" path="res://scenes/win_screen.gd" id="1_t6ert"]
+[ext_resource type="Script" path="res://scripts/win_screen.gd" id="1_t6ert"]
 [ext_resource type="Texture2D" uid="uid://boekyecldrqe2" path="res://sprites/merged/merged_0.png" id="2_67bb1"]
 [ext_resource type="LabelSettings" uid="uid://bwyk0l0rth6ab" path="res://misc_resources/default_header.tres" id="3_wn46r"]
 [ext_resource type="Texture2D" uid="uid://cvb7jfkaxmbdu" path="res://sprites/scenery/speech.png" id="4_5flnf"]
