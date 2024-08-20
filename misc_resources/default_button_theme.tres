@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://domq57dpstxo7"]
+
+[ext_resource type="FontFile" uid="uid://bm7ctwey0757e" path="res://misc_resources/Cella.ttf" id="1_mj20x"]
+
+[resource]
+default_font = ExtResource("1_mj20x")
+default_font_size = 64
