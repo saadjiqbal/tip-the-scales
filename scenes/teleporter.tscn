@@ -1,9 +1,77 @@
-[gd_scene load_steps=5 format=3 uid="uid://l5sgoluep11v"]
+[gd_scene load_steps=21 format=3 uid="uid://l5sgoluep11v"]
 
 [ext_resource type="Texture2D" uid="uid://b6hoooye2h5rd" path="res://sprites/scenery/teleporter.png" id="1_gka44"]
 [ext_resource type="Script" path="res://scripts/teleporter.gd" id="2_st1fq"]
 [ext_resource type="AudioStream" uid="uid://lbqvrytov8fl" path="res://Audio/SFX/SFX_Teleport_03.wav" id="3_1p2uf"]
 [ext_resource type="PackedScene" uid="uid://bp66k5ywouyed" path="res://scenes/teleport_effect.tscn" id="4_3jur6"]
+[ext_resource type="Texture2D" uid="uid://ucavbhe454wu" path="res://sprites/scanner_animation/scanner_animation0000.png" id="5_xufce"]
+[ext_resource type="Texture2D" uid="uid://dauaujpuv8gjh" path="res://sprites/scanner_animation/scanner_animation0001.png" id="6_d54t5"]
+[ext_resource type="Texture2D" uid="uid://yoec755onlfe" path="res://sprites/scanner_animation/scanner_animation0002.png" id="7_2toss"]
+[ext_resource type="Texture2D" uid="uid://c3nc31p7h4j0t" path="res://sprites/scanner_animation/scanner_animation0003.png" id="8_ycnh4"]
+[ext_resource type="Texture2D" uid="uid://bnwoj6be6m3ce" path="res://sprites/scanner_animation/scanner_animation0004.png" id="9_yahu1"]
+[ext_resource type="Texture2D" uid="uid://d4lpcx6oneci4" path="res://sprites/scanner_animation/scanner_animation0005.png" id="10_tudxm"]
+[ext_resource type="Texture2D" uid="uid://do4olfjo5tnqr" path="res://sprites/scanner_animation/scanner_animation0006.png" id="11_pbs05"]
+[ext_resource type="Texture2D" uid="uid://bhpk00ow0qjj5" path="res://sprites/scanner_animation/scanner_animation0007.png" id="12_k80jk"]
+[ext_resource type="Texture2D" uid="uid://brsl5vc78cuf2" path="res://sprites/scanner_animation/scanner_animation0009.png" id="13_t26k8"]
+[ext_resource type="Texture2D" uid="uid://nf8h8cowgd7e" path="res://sprites/scanner_animation/scanner_animation0010.png" id="14_jam1f"]
+[ext_resource type="Texture2D" uid="uid://idk4awoaajvo" path="res://sprites/scanner_animation/scanner_animation0011.png" id="15_lu7am"]
+[ext_resource type="Texture2D" uid="uid://bppfxr5cw132d" path="res://sprites/scanner_animation/scanner_animation0012.png" id="16_3fqhm"]
+[ext_resource type="Texture2D" uid="uid://45lyv5e5m3da" path="res://sprites/scanner_animation/scanner_animation0013.png" id="17_xy1ti"]
+[ext_resource type="Texture2D" uid="uid://mid215gmcgey" path="res://sprites/scanner_animation/scanner_animation0014.png" id="18_g3y7j"]
+[ext_resource type="Texture2D" uid="uid://de8mbbueyjy1m" path="res://sprites/scanner_animation/scanner_animation0015.png" id="19_c4808"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_equyk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_xufce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_d54t5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2toss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ycnh4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_yahu1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_tudxm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_pbs05")
+}, {
+"duration": 2.0,
+"texture": ExtResource("12_k80jk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_t26k8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_jam1f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_lu7am")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_3fqhm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_xy1ti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_g3y7j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_c4808")
+}],
+"loop": false,
+"name": &"scan",
+"speed": 24.0
+}]
 
 [node name="Teleporter" type="Sprite2D"]
 texture = ExtResource("1_gka44")
@@ -33,3 +101,10 @@ stream = ExtResource("3_1p2uf")
 
 [node name="TeleportEffect" parent="." instance=ExtResource("4_3jur6")]
 position = Vector2(-963, -199)
+
+[node name="ScannerAnimation" type="AnimatedSprite2D" parent="."]
+position = Vector2(816, 215)
+sprite_frames = SubResource("SpriteFrames_equyk")
+animation = &"scan"
+frame = 14
+frame_progress = 1.0
