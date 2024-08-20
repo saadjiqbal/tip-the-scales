@@ -86,6 +86,11 @@ stream = ExtResource("8_8ehep")
 position = Vector2(644, 569)
 scale = Vector2(5, 7)
 
+[node name="RayCast2D2" type="RayCast2D" parent="."]
+position = Vector2(-173, 886)
+scale = Vector2(10, 24)
+target_position = Vector2(62.6, 0.166668)
+
 [node name="HealthUI" parent="." instance=ExtResource("11_i0i4r")]
 
 [node name="screen_barrier" type="StaticBody2D" parent="."]
