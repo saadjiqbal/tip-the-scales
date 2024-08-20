@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bc0icelor8184"]
+[gd_scene load_steps=10 format=3 uid="uid://bc0icelor8184"]
 
 [ext_resource type="Texture2D" uid="uid://2pw0q6jimw0y" path="res://sprites/scenery/menu.png" id="1_lwlwq"]
 [ext_resource type="Script" path="res://scripts/win_screen.gd" id="1_t6ert"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cvb7jfkaxmbdu" path="res://sprites/scenery/speech.png" id="4_5flnf"]
 [ext_resource type="Theme" uid="uid://domq57dpstxo7" path="res://misc_resources/default_button_theme.tres" id="4_75wbx"]
 [ext_resource type="FontFile" uid="uid://bm7ctwey0757e" path="res://misc_resources/Cella.ttf" id="6_6k4p6"]
+[ext_resource type="AudioStream" uid="uid://b626lwa3fuide" path="res://Audio/SFX/SFX_Win.wav" id="8_86ojs"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0wuot"]
 font = ExtResource("6_6k4p6")
@@ -97,6 +98,9 @@ grow_vertical = 0
 theme = ExtResource("4_75wbx")
 text = "exit game
 "
+
+[node name="SFX_Win" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_86ojs")
 
 [connection signal="pressed" from="RestartGame" to="." method="_on_restart_game_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

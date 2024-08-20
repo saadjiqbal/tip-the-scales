@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var win_screen: PackedScene =\
+	preload("res://scenes/win_screen.tscn")
 
 var core_0 = preload("res://scenes/objects/core_0.tscn")
 var arm_0 = preload("res://scenes/objects/arm_0.tscn")
@@ -8,10 +10,12 @@ var thruster_0 = preload("res://scenes/objects/thruster_0.tscn")
 var satelite = preload("res://scenes/objects/satelite.tscn")
 
 
-var max_scale : Vector2 = Vector2(0.5, 0.55)
-var min_scale : Vector2 = Vector2(0.4, 0.35)
+var max_scale : Vector2 = Vector2(0.55, 0.55)
+var min_scale : Vector2 = Vector2(0.35, 0.35)
 
 var object_name
+
+var good_objects_scanned : int = 0
 
 signal damaged()
 
@@ -31,6 +35,7 @@ func _process(delta: float) -> void:
 			if object_scale < max_scale && object_scale > min_scale:
 				$RayCast2D.get_collider().queue_free()
 				$Good_job.play()
+				good_objects_scanned += 1
 			else:
 				$RayCast2D.get_collider().queue_free()
 				$Bad_job.play()
@@ -45,6 +50,9 @@ func _process(delta: float) -> void:
 		print(object_scale)
 		print(object_name)
 		
+	
+	if good_objects_scanned == 5:
+		get_tree().change_scene_to_packed(win_screen)
 
 func translate_name_to_part():
 	var og_name : String = $RayCast2D.get_collider().name

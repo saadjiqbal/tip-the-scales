@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dxnkvoixi407h"]
+[gd_scene load_steps=11 format=3 uid="uid://dxnkvoixi407h"]
 
 [ext_resource type="Texture2D" uid="uid://2pw0q6jimw0y" path="res://sprites/scenery/menu.png" id="1_87240"]
 [ext_resource type="Script" path="res://scripts/lose_screen.gd" id="1_otipo"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dx7vhr5rwb3tm" path="res://sprites/fire_animation/fire0002.png" id="5_1skgu"]
 [ext_resource type="Texture2D" uid="uid://1x8mn5k3e66c" path="res://sprites/fire_animation/fire0004.png" id="6_sehxo"]
 [ext_resource type="Texture2D" uid="uid://cbba5oywlpfpw" path="res://sprites/fire_animation/fire0006.png" id="7_742ov"]
+[ext_resource type="AudioStream" uid="uid://c10j6ioifqmnk" path="res://Audio/SFX/SFX_Lose.wav" id="9_fqmt3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_e6kmd"]
 animations = [{
@@ -93,6 +94,9 @@ position = Vector2(1398, 558)
 sprite_frames = SubResource("SpriteFrames_e6kmd")
 animation = &"fire"
 frame_progress = 0.785261
+
+[node name="SFX_Lose" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_fqmt3")
 
 [connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
