@@ -19,6 +19,38 @@ func _ready() -> void:
 
 func _physics_process(delta) -> void:
 	scale_object(delta)
+	if Input.is_action_just_released("ui_accept"):
+		#Object needs to be slighly moved after stoping on the coveyor
+		#This is because once the conveyor stops and starts again,
+		#objects do not continue to follow the conveyors colision box once
+		#it starts moving again.
+		#DO NOT DELETE unless you have an alternate solution
+		jitter_scale_up()
+		get_tree().create_timer(0.02).timeout.connect(jitter_scale_down)
+
+func jitter_scale_up():
+	#Ment to jitter the object to prevent it from getting stuck on the conveyor
+	sprite_2d.scale.x += 0.01
+	sprite_2d.scale.y += 0.01
+
+	collision_shape2d.scale.x += 0.01
+	collision_shape2d.scale.y += 0.01
+
+	physics_collision_shape.scale.x += 0.01
+	physics_collision_shape.scale.y += 0.01
+
+
+func jitter_scale_down():
+	#It's only purpose is to scale the item back to what it was after
+	#the jitter_scale_up function is exicuted
+	sprite_2d.scale.x -= 0.01
+	sprite_2d.scale.y -= 0.01
+
+	collision_shape2d.scale.x -= 0.01
+	collision_shape2d.scale.y -= 0.01
+
+	physics_collision_shape.scale.x -= 0.01
+	physics_collision_shape.scale.y -= 0.01
 
 func scale_object(delta) -> void:
 	# Left click to scale up, right click to scale down

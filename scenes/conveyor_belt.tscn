@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://byfxcixpc3i6f"]
+[gd_scene load_steps=10 format=3 uid="uid://byfxcixpc3i6f"]
 
 [ext_resource type="Texture2D" uid="uid://q7sm1yy0v41i" path="res://sprites/conveyor_belt/belt0000.png" id="1_fqolv"]
 [ext_resource type="Texture2D" uid="uid://bhisl51ndnmy" path="res://sprites/conveyor_belt/belt0002.png" id="2_bbu3d"]
@@ -30,6 +30,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_es4ei"]
 size = Vector2(3518, 93)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2d8m4"]
+size = Vector2(1.985, 35.375)
+
 [node name="ConveyorBelt" type="AnimatedSprite2D"]
 position = Vector2(0, 846)
 sprite_frames = SubResource("SpriteFrames_bo6oa")
@@ -44,11 +47,19 @@ script = ExtResource("2_u6oxh")
 position = Vector2(-566, 132)
 shape = SubResource("RectangleShape2D_es4ei")
 
-[node name="ObjectDetector" type="RayCast2D" parent="."]
-position = Vector2(852, -639)
-scale = Vector2(5, 8)
-target_position = Vector2(0.0200005, 88.125)
+[node name="ObjectDetector" type="Area2D" parent="."]
+position = Vector2(924, -623)
+scale = Vector2(200, 8)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectDetector"]
+position = Vector2(0.9925, 70.3125)
+shape = SubResource("RectangleShape2D_2d8m4")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_nx7qx")
 volume_db = 8.771
+
+[connection signal="area_entered" from="ObjectDetector" to="." method="_on_object_detector_area_entered"]
+[connection signal="area_exited" from="ObjectDetector" to="." method="_on_object_detector_area_exited"]
