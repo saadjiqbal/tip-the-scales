@@ -32,4 +32,13 @@ func _on_object_detector_area_entered(area: Area2D) -> void:
 
 func _on_object_detector_area_exited(area: Area2D) -> void:
 	self.play("roll")
+	belt_collision.position.y += 1.0
 	part_under_teleporter = false
+	$Timer.start()
+
+func bring_belt_back_down():
+	pass
+
+
+func _on_timer_timeout() -> void:
+	belt_collision.position.y -= 1.0

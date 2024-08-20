@@ -17,8 +17,32 @@ var new_mouse_pos : Vector2
 func _ready() -> void:
 	pass
 
-func _physics_process(delta):
+func _physics_process(delta) -> void:
 	scale_object(delta)
+	if Input.is_action_just_released("ui_accept"):
+		jitter_scale_up()
+		get_tree().create_timer(0.02).timeout.connect(jitter_scale_down)
+
+func jitter_scale_up():
+	sprite_2d.scale.x += 0.01
+	sprite_2d.scale.y += 0.01
+
+	collision_shape2d.scale.x += 0.01
+	collision_shape2d.scale.y += 0.01
+
+	physics_collision_shape.scale.x += 0.01
+	physics_collision_shape.scale.y += 0.01
+
+
+func jitter_scale_down():
+	sprite_2d.scale.x -= 0.01
+	sprite_2d.scale.y -= 0.01
+
+	collision_shape2d.scale.x -= 0.01
+	collision_shape2d.scale.y -= 0.01
+
+	physics_collision_shape.scale.x -= 0.01
+	physics_collision_shape.scale.y -= 0.01
 
 func scale_object(delta) -> void:
 	# Left click to scale up, right click to scale down

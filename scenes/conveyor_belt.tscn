@@ -31,7 +31,7 @@ animations = [{
 size = Vector2(3518, 93)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2d8m4"]
-size = Vector2(2.125, 35.375)
+size = Vector2(1.985, 35.375)
 
 [node name="ConveyorBelt" type="AnimatedSprite2D"]
 position = Vector2(0, 846)
@@ -54,12 +54,17 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectDetector"]
-position = Vector2(0.9225, 70.3125)
+position = Vector2(0.9925, 70.3125)
 shape = SubResource("RectangleShape2D_2d8m4")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_nx7qx")
 volume_db = 8.771
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
 [connection signal="area_entered" from="ObjectDetector" to="." method="_on_object_detector_area_entered"]
 [connection signal="area_exited" from="ObjectDetector" to="." method="_on_object_detector_area_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
