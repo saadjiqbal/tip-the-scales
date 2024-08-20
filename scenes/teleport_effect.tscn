@@ -57,7 +57,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"teleport",
-"speed": 30.0
+"speed": 50.0
 }]
 
 [node name="TeleportEffect" type="AnimatedSprite2D"]
