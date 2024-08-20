@@ -1,7 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://c4kmcxbk2a2wc"]
+[gd_scene load_steps=10 format=3 uid="uid://dxnkvoixi407h"]
 
 [ext_resource type="Texture2D" uid="uid://2pw0q6jimw0y" path="res://sprites/scenery/menu.png" id="1_87240"]
-[ext_resource type="Script" path="res://scenes/lose_screen.gd" id="1_otipo"]
+[ext_resource type="Script" path="res://scripts/lose_screen.gd" id="1_otipo"]
 [ext_resource type="LabelSettings" uid="uid://bwyk0l0rth6ab" path="res://misc_resources/default_header.tres" id="2_133a2"]
 [ext_resource type="Theme" uid="uid://domq57dpstxo7" path="res://misc_resources/default_button_theme.tres" id="3_8jmve"]
 [ext_resource type="Texture2D" uid="uid://t4wpe6udrtby" path="res://sprites/fire_animation/fire0000.png" id="4_tr6bp"]
