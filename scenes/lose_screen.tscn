@@ -1,0 +1,94 @@
+[gd_scene load_steps=10 format=3 uid="uid://c4kmcxbk2a2wc"]
+
+[ext_resource type="Texture2D" uid="uid://2pw0q6jimw0y" path="res://sprites/scenery/menu.png" id="1_87240"]
+[ext_resource type="Script" path="res://scenes/lose_screen.gd" id="1_otipo"]
+[ext_resource type="LabelSettings" uid="uid://bwyk0l0rth6ab" path="res://misc_resources/default_header.tres" id="2_133a2"]
+[ext_resource type="Theme" uid="uid://domq57dpstxo7" path="res://misc_resources/default_button_theme.tres" id="3_8jmve"]
+[ext_resource type="Texture2D" uid="uid://t4wpe6udrtby" path="res://sprites/fire_animation/fire0000.png" id="4_tr6bp"]
+[ext_resource type="Texture2D" uid="uid://dx7vhr5rwb3tm" path="res://sprites/fire_animation/fire0002.png" id="5_1skgu"]
+[ext_resource type="Texture2D" uid="uid://1x8mn5k3e66c" path="res://sprites/fire_animation/fire0004.png" id="6_sehxo"]
+[ext_resource type="Texture2D" uid="uid://cbba5oywlpfpw" path="res://sprites/fire_animation/fire0006.png" id="7_742ov"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e6kmd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_tr6bp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1skgu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_sehxo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_742ov")
+}],
+"loop": true,
+"name": &"fire",
+"speed": 12.0
+}]
+
+[node name="LoseScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_otipo")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_87240")
+
+[node name="TitleLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -269.0
+offset_top = 71.0
+offset_right = 269.0
+offset_bottom = 230.0
+grow_horizontal = 2
+text = "oops..."
+label_settings = ExtResource("2_133a2")
+
+[node name="RestartButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 57.0
+offset_top = -571.0
+offset_right = 603.0
+offset_bottom = -483.0
+grow_vertical = 0
+theme = ExtResource("3_8jmve")
+text = "restart game"
+
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 57.0
+offset_top = -433.0
+offset_right = 468.0
+offset_bottom = -345.0
+grow_vertical = 0
+theme = ExtResource("3_8jmve")
+text = "exit game
+"
+
+[node name="FireAnimation" type="AnimatedSprite2D" parent="."]
+position = Vector2(1398, 558)
+sprite_frames = SubResource("SpriteFrames_e6kmd")
+animation = &"fire"
+frame_progress = 0.709306

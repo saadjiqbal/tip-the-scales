@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6hoooye2h5rd"
-path="res://.godot/imported/teleporter.png-4a5f632d5ec26ffb95c6f6e05728234d.ctex"
+uid="uid://qdnfrxbellc1"
+path="res://.godot/imported/ruler.png-f535f207bdfec43edc4c2fea6781cba9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/teleporter.png"
-dest_files=["res://.godot/imported/teleporter.png-4a5f632d5ec26ffb95c6f6e05728234d.ctex"]
+source_file="res://sprites/scenery/ruler.png"
+dest_files=["res://.godot/imported/ruler.png-f535f207bdfec43edc4c2fea6781cba9.ctex"]
 
 [params]
 
