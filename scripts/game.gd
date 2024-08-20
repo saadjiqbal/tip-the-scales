@@ -1,5 +1,8 @@
 extends Node2D
 
+@onready var win_screen: PackedScene =\
+	preload("res://scenes/win_screen.tscn")
+
 var can_appand : bool
 var part_list : int
 #core_0 = 0
@@ -25,6 +28,8 @@ var part_number : int = 0
 var randomize_scale : float
 var space_avaialable : bool
 
+var times_up : bool
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	randomize()
@@ -48,12 +53,27 @@ func spawn_part() -> void:
 		part_number += 1
 		space_avaialable = false
 	
+	if part_number == robot_01_parts.size() - 1:
+		times_up = false
+		var new_raycast = RayCast2D.new()
+		new_raycast.position = Vector2(0, 569)
+		get_tree().create_timer(1.0).timeout.connect(timer_timeout)
+		if !new_raycast.is_colliding() && times_up:
+			add_child(robot_01_parts[part_number].instantiate())
+			part_number += 1
+	
 	if $RayCast2D.is_colliding() == false:
 		space_avaialable = true
-		
+
+func timer_timeout():
+	times_up = true
+
 func check_part_number() -> void:
 	if part_number >= robot_01_parts.size():
 		needs_parts = false
+		##Buggy code for some reson. IDK yet
+		#Global.win = true
+		#get_tree().change_scene_to_packed(win_screen)
 
 func append_array():
 	if can_appand:

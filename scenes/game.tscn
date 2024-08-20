@@ -1,3 +1,4 @@
+
 [gd_scene load_steps=13 format=3 uid="uid://xjnffox0uabc"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_nx7mq"]
@@ -8,10 +9,20 @@
 [ext_resource type="Texture2D" uid="uid://qdnfrxbellc1" path="res://sprites/scenery/ruler.png" id="6_6otky"]
 [ext_resource type="PackedScene" uid="uid://l5sgoluep11v" path="res://scenes/teleporter.tscn" id="7_x186n"]
 [ext_resource type="AudioStream" uid="uid://bp85jp075xji8" path="res://Audio/Music/S06_E06_GMTK_2024.mp3" id="8_8ehep"]
+
 [ext_resource type="PackedScene" uid="uid://iy4a2pn8v7uq" path="res://scenes/manual.tscn" id="8_d6nrw"]
 [ext_resource type="PackedScene" uid="uid://cf8ua2wgbg8sc" path="res://scenes/pause_menu.tscn" id="9_s66rr"]
 [ext_resource type="Script" path="res://scripts/pause_menu.gd" id="10_p35w1"]
 [ext_resource type="PackedScene" uid="uid://cqpkbxkwluad7" path="res://scenes/health_ui.tscn" id="11_i0i4r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trbi2"]
+size = Vector2(2441, 100.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c3hhp"]
+size = Vector2(91, 1036)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_31po2"]
+size = Vector2(124.75, 1229)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_nx7mq")
@@ -78,5 +89,23 @@ position = Vector2(644, 569)
 scale = Vector2(5, 7)
 
 [node name="HealthUI" parent="." instance=ExtResource("11_i0i4r")]
+
+[node name="screen_barrier" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="screen_barrier"]
+position = Vector2(732, -341)
+shape = SubResource("RectangleShape2D_trbi2")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="screen_barrier"]
+position = Vector2(725, 1133)
+shape = SubResource("RectangleShape2D_trbi2")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="screen_barrier"]
+position = Vector2(1968.5, 224)
+shape = SubResource("RectangleShape2D_c3hhp")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="screen_barrier"]
+position = Vector2(-450, 309.5)
+shape = SubResource("RectangleShape2D_31po2")
 
 [editable path="PauseMenu"]

@@ -1,6 +1,9 @@
 extends Node
 
-var durability : int = 5
+var health : int
+var damage : bool
+
+var win : bool
 
 
 # Called when the node enters the scene tree for the first time.

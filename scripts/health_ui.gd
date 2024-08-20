@@ -4,7 +4,11 @@ extends Control
 	preload("res://scenes/lose_screen.tscn")
 @onready var health_sprites: Control = $HealthSprites
 
-var health: int = 5
+
+var health: int = Global.health
+
+func _ready() -> void:
+	Global.health = 5
 
 # Free the rightmost health indicator, and load lose_screen.tscn if health == 0
 func _on_game_damage_taken():
@@ -15,6 +19,8 @@ func _on_game_damage_taken():
 		health_sprites.get_child(health).queue_free()
 
 # Debug to test health loss functionality. Don't turn back on
-#func _process(_delta) -> void:
-	#if Input.is_action_just_pressed("ui_accept"):
-		#_on_game_damage_taken()
+func _process(_delta) -> void:
+	if Global.damage:
+		_on_game_damage_taken()
+		Global.damage = false
+		print(health)

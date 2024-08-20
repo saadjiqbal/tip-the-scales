@@ -36,7 +36,8 @@ func _process(delta: float) -> void:
 			get_parent().append_array()
 			get_parent().can_appand = false
 			#Reduces the machines durability
-			Global.durability -= 1
+			Global.health -= 1
+			Global.damage = true
 		
 		print(object_scale)
 		print(object_name)
